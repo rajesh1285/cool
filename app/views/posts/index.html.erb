@@ -1,15 +1,9 @@
-<h1>This is index page</h1>
 
-<%@posts.each do |post| %>
-<table>
-<th>
-    <tr>
-	<%=post.title%>
-	</tr>
-	<tr>
-	<%=post.body%>
-    </tr>
-    </th>
-	<%end%>
-		
-	</table>
+
+<% @posts.each do |post| %>
+<div class="post_wrapper">
+<h2 class="title"><%= link_to post.title,post%></h2>
+<p class="date"><%=post.created_at.strftime("%B,%d,%Y")%></p>
+
+</div>
+<%end%>
