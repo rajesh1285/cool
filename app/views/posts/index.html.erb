@@ -1,0 +1,15 @@
+<h1>This is index page</h1>
+
+<%@posts.each do |post| %>
+<table>
+<th>
+    <tr>
+	<%=post.title%>
+	</tr>
+	<tr>
+	<%=post.body%>
+    </tr>
+    </th>
+	<%end%>
+		
+	</table>
