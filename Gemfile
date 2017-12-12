@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 #gem 'twitter-bootstrap-rails'
 #gem 'devise-bootstrap-views'
 gem "font-awesome-rails"
@@ -12,6 +13,10 @@ gem 'simple_form', '~> 3.5'
 gem 'acts_as_votable', '~> 0.11.1'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
+=======
+
+
+>>>>>>> origin/master
 gem 'bootstrap'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

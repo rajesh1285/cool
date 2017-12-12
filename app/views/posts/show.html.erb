@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="col-md-12">
 <%= image_tag@post.image.url(:medium)%>
 <h1 class="title">
@@ -5,11 +6,23 @@
 </h1>
 <p class="date">
 Submitted <%= time_ago_in_words(@post.created_at)%>Ago  <%=@post.user.email%>
+=======
+
+
+<h1 class="title">
+<%= @post.title%></h1>
+
+
+
+<p class="date">
+Submitted<%= time_ago_in_words(@post.created_at)%>Ago
+>>>>>>> origin/master
 </p>
 <p>
 <%=@post.body%>
 </p>
 
+<<<<<<< HEAD
 </div> 
 <div class="col-md-9">
 <div id="comments">
@@ -32,3 +45,6 @@ Submitted <%= time_ago_in_words(@post.created_at)%>Ago  <%=@post.user.email%>
   <%end%>
   <%end%>
 </div>
+=======
+<%=link_to "Back",root_path%>
+>>>>>>> origin/master

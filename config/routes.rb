@@ -1,4 +1,5 @@
 Rails.application.routes.draw do  
+<<<<<<< HEAD
   devise_for :users
   root "posts#index"
   
@@ -12,4 +13,8 @@ Rails.application.routes.draw do
   #get 'pages/about'
 
 get '/about', :to => 'pages#about'  
+=======
+  root "posts#index"
+  resources :posts
+>>>>>>> origin/master
 end

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171212075443) do
 
   create_table "comments", force: :cascade do |t|
@@ -22,12 +23,16 @@ ActiveRecord::Schema.define(version: 20171212075443) do
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
+=======
+ActiveRecord::Schema.define(version: 20171204144117) do
+>>>>>>> origin/master
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
@@ -69,6 +74,8 @@ ActiveRecord::Schema.define(version: 20171212075443) do
     t.datetime "updated_at"
     t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+=======
+>>>>>>> origin/master
   end
 
 end

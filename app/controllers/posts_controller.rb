@@ -1,27 +1,40 @@
 class PostsController < ApplicationController
+<<<<<<< HEAD
 
   before_action :authenticate_user!, except: [:index , :show]
   
 
 
+=======
+>>>>>>> origin/master
   def index
     @posts =Post.all.order('created_at DESC ')
   end
 
   def create
+<<<<<<< HEAD
     @post = current_user.posts.build(post_params)
          
       if @post.save
         
+=======
+    @post = Post.new(post_params)
+      if @post.save
+>>>>>>> origin/master
       redirect_to @post
     else
       render 'new'
       end
   end
 
+<<<<<<< HEAD
   def new 
 
    @post = Post.new 
+=======
+  def new
+   @post = Post.new
+>>>>>>> origin/master
 
   end
 
@@ -30,6 +43,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+<<<<<<< HEAD
     @post = Post.find(params[:id])
     @post.destroy
  
@@ -67,11 +81,21 @@ class PostsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
   
+=======
+  end
+
+  def edit
+  end
+>>>>>>> origin/master
 
 
    private 
     def post_params
+<<<<<<< HEAD
       params.require(:post).permit(:title,:body,:image,:firstname)
+=======
+      params.require(:post).permit(:title,:body)
+>>>>>>> origin/master
     end
 
     

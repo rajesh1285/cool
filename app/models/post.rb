@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+<<<<<<< HEAD
       acts_as_votable
       belongs_to :user
       has_many :comments ,dependent: :destroy
@@ -9,6 +10,8 @@ class Post < ApplicationRecord
       
 
 
+=======
+>>>>>>> origin/master
 	 validates :title, presence: true,
                     length: { minimum: 5 }
 	validates :body, presence: true	
