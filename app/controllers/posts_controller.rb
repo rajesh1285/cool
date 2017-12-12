@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
          
       if @post.save
         
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   def new 
 
-   @post = Post.new
+   @post = Post.new 
 
   end
 
@@ -54,11 +54,24 @@ class PostsController < ApplicationController
     end
 
   end
+  
+  def upvote
+    @post = Post.find(params[:id])
+    @post.upvote_by current_user
+    redirect_back(fallback_location: root_path)
+  end
+
+  def downvote
+    @post = Post.find(params[:id])
+    @post.downvote_by current_user
+    redirect_back(fallback_location: root_path)
+  end
+  
 
 
    private 
     def post_params
-      params.require(:post).permit(:title,:body,:image)
+      params.require(:post).permit(:title,:body,:image,:firstname)
     end
 
     

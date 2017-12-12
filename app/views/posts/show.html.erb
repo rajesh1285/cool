@@ -4,7 +4,7 @@
 <%= @post.title %>
 </h1>
 <p class="date">
-Submitted<%= time_ago_in_words(@post.created_at)%>Ago
+Submitted <%= time_ago_in_words(@post.created_at)%>Ago  <%=@post.user.email%>
 </p>
 <p>
 <%=@post.body%>
@@ -24,9 +24,11 @@ Submitted<%= time_ago_in_words(@post.created_at)%>Ago
 	    <%= render "comments/form" %>
     </div>
  <br>
- 
+
+ <% if @post.user == current_user %>
    <%= link_to 'Edit', edit_post_path(@post) , class: "button"%> | <%= link_to 'Destroy', post_path(@post), class: "button",
           method: :delete,
           data: { confirm: 'Are you sure?' } %> | <%=link_to "Back",root_path , class: "button"%>	
+  <%end%>
   <%end%>
 </div>

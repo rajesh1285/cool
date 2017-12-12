@@ -7,7 +7,9 @@ end
 
 #gem 'twitter-bootstrap-rails'
 #gem 'devise-bootstrap-views'
-
+gem "font-awesome-rails"
+gem 'simple_form', '~> 3.5'
+gem 'acts_as_votable', '~> 0.11.1'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'bootstrap'
